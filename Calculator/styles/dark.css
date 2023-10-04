@@ -1,0 +1,165 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.gradient {
+  background: radial-gradient(
+    circle at -8.9% 51.2%,
+    rgb(255, 124, 0) 0%,
+    rgb(255, 124, 0) 15.9%,
+    rgb(255, 163, 77) 15.9%,
+    rgb(255, 163, 77) 24.4%,
+    rgb(19, 30, 37) 24.5%,
+    rgb(19, 30, 37) 66%
+  ) no-repeat;
+  font-family: "Exo 2", sans-serif;
+  font-family: "Major Mono Display", monospace;
+  font-family: "Space Mono", monospace;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.calculator {
+  border-radius: 15px;
+  box-shadow: 8px 8px 5px 0px rgb(13, 13, 13),
+    -3px -3px 5px 0px rgba(14, 13, 13, 0.5);
+  padding: 20px;
+  width: 300px;
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 0.5s ease-in-out forwards; /* Fade-in animation */
+  transition-duration: 1s;
+}
+
+.calculator:hover {
+  box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 0.2),
+    -1px -1px 0px 0px rgba(0, 0, 0, 0.5);
+  transition-duration: 1s;
+}
+
+#toast{
+    color: #d0d5dc;
+    font-weight: bolder;
+}
+
+.theme-button{
+  background-color: rgb(255, 124, 0);
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.ex-btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+}
+
+.in-btn {
+  background-color: #0072b1;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: bolder;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 4px 4px 1px 1px rgb(13, 13, 13),
+    -4px -4px 6px 0px rgba(14, 13, 13, 0.5);
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.in-btn:hover {
+  background-color: #ffffff;
+  color: #0d86c8;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2),
+    0px 0px 0px 0px rgba(0, 0, 0, 0.2);
+  transition-duration: 0.5s;
+}
+
+.in-btn:active {
+  background-color: #324e75;
+}
+
+.git-btn {
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 25px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 4px 4px 1px 1px rgb(13, 13, 13),
+    -4px -4px 6px 0px rgba(14, 13, 13, 0.5);
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.git-btn:hover {
+    background-color: #000000;
+    color: #ffffff;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2),
+      0px 0px 0px 0px rgba(0, 0, 0, 0.2);
+    transition-duration: 0.5s;
+  }
+
+.screen {
+  background-color: rgb(248, 180, 116);
+  color: rgb(42, 64, 77);
+  font-size: 24px;
+  text-align: right;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  width: 94%;
+}
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+.button {
+  background-color: rgb(255, 124, 0);
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.button:hover {
+  background-color: rgb(248, 180, 116);
+}
+.button:active {
+  background-color: #d0d5dc;
+  box-shadow: inset 5px 5px 10px 0px rgba(0, 0, 0, 0.1),
+    inset -5px -5px 10px 0px rgba(255, 255, 255, 0.8);
+}
+
+.history {
+  background-color: rgb(248, 180, 116);
+  color: rgb(42, 64, 77);
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+  overflow-y: scroll;
+  max-height: 100px;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1; /* Fade in the calculator card */
+  }
+}
