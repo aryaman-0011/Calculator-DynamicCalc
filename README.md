@@ -10,4 +10,4 @@ A basic web-based calculator built with HTML, CSS, and JavaScript.
 
 ### Prerequisites
 
-
+You need a web browser to run the calculator. No additional software or installations are required.
